@@ -1,0 +1,125 @@
+*/This API call accomplishes serveral things at the same time.
+Add, Delete for devices
+Add, Delete for services which will return an updated cost*/
+
+//You could also use PUT but the request boby will change
+POST: /customer/{CustomerId}/devices 
+Request Body Example
+{
+	"DeviceType":
+	{
+		"Type": 1,
+		"Name": "Mac"			
+	},
+	"SiteId": 1,
+	"description": "Text goes here",
+	"antivirus":
+	{
+		"antivirusProduct": "Norton",
+		"antivirusStatus": "RunningAndUpToDate"
+	}	
+}
+
+RESPONSE 
+{
+	"CustomerId": 0,
+	"devices": [
+	{		
+		"uid": 0,
+		"SiteId": 0,
+		"SystemName": "string",
+		"DeviceType":{			
+			"Type": 0,
+			"Name""string"			
+		}
+		"online": true,
+		"description": "string",
+		"antivirus": {
+			"antivirusProduct": "string",
+			"antivirusStatus": "RunningAndUpToDate"
+		},
+		"backup": {
+			"backupProduct": "string",
+			"backupStatus": "RunningAndUpToDate"
+		},
+		"screenShare": {
+			"screenShareProduct": "string",
+			"screenShareStatus": "RunningAndUpToDate"
+		}
+	}],
+	"servicesAndCost":
+	{
+		"DeviceCost": 0,
+		"AntivirusCost": 0,
+		"BackupCost": 0,
+		"ScreenShareCost": 0,
+		"TotalCost": 0
+	},
+	"pageDetails": 
+	{
+		"count": 0,
+		"prevPageUrl": "string",
+		"nextPageUrl": "string"
+	},
+	"updatedBy": "string"
+	"lastUpdateDate": "yyyy-mm-ddThh:mm:ss.000Z"
+}
+
+DELETE: /customer/{CustomerId}/devices
+Required parameter CustomerId**
+
+RESPONSE
+204 code if succesful 
+
+
+//Add, Delete for services assigned to a device
+ADD: devices/{DeviceId}/services
+
+Request Body Example
+{
+	"DeviceId": 1,
+	"services":{			
+		"DeviceType": 1,
+		"Name": "string"
+		"AntivirusFlag": 1,
+		"BackupFlag": 1,
+		"ScreenshareFlag": 0
+	}		
+}
+
+RESPONSE
+
+[
+	{
+		"DeviceId": 0,		
+		"services":[
+		{			
+			"DeviceType": 0,
+			"Name": "string"
+			"AntivirusFlag": 1,
+			"BackupFlag": 1,
+			"ScreenshareFlag": 0
+		}],
+		"pageDetails": 
+		{	
+			"count": 0,
+			"prevPageUrl": "string",
+			"nextPageUrl": "string"
+		},
+		"updatedBy": "string"
+		"lastUpdateDate": "yyyy-mm-ddThh:mm:ss.000Z"
+	}
+]
+
+DELETE: devices/{DeviceId}/services
+Required parameter DeviceId**
+
+RESPONSE
+204 code if succesful 
+
+
+//Security: If the request is not successful, one of the following error codes are returned:
+	400 - Request body is incorrect
+	403 - Forbidden
+	404 - Form does not exist
+	500 - Internal Server Error
