@@ -1,0 +1,10 @@
+User Story:
+
+As a user, I want to be able to do a calculate the total cost of the services depending on service used by a Device
+/customer/{CustomerId}/devices
+
+Acceptance Criteria:
+
+Response returns a valid successful code
+Response returns a list of devices with a break down of costs per device and service
+Response returns the toal cost 
