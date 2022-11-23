@@ -1,0 +1,7 @@
+User Story:
+
+As a user, I want to be able to query the SQL schema for Device, Cost, Backup, Antivirus and Screnshare Tables
+
+Acceptance Criteria:
+
+Ensure that the user can query the schemas and no errors occur
