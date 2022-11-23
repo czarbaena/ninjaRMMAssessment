@@ -1,1 +1,8 @@
-services
+User Story:
+
+As a user, I want to be able to do a GET request on Devices for Device and Services
+/devices/{DeviceId}/services
+
+Acceptance Criteria:
+
+GET Response returns a valid successful code
