@@ -1,0 +1,11 @@
+User Story:
+
+As a user, I want to be able to do a run /customer/{CustomerId}/devices as many times as possible without having the system break down
+
+Acceptance Criteria:
+
+Response returns a valid successful code
+Response returns all device information
+Cache system is implemented
+Report is available for users to check for performance gains
+Adding new device information invalidates cache
