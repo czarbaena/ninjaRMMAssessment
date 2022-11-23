@@ -1,0 +1,9 @@
+User Story:
+
+As a user, I want to be able to do a ADD a new Device and include services such as antivirus, backup and screenShare
+/customer/{CustomerId}/devices
+
+Acceptance Criteria:
+
+Response returns a valid successful code
+Res
