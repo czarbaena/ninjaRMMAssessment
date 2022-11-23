@@ -6,6 +6,7 @@ CREATE TABLE IF NOT EXISTS Device
 	Description VARCHAR (200) NOT NULL,
 	DeviceType VARCHAR (50) NOT NULL,
 	DeviceName VARCHAR (50) NOT NULL,
+	SystemName VARCHAR (50) NOT NULL,
 	Online BIT,
 	AntivirusFlag BIT,
 	BackupFlag BIT,
