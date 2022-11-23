@@ -6,5 +6,5 @@ As a user, I want to be able to do a calculate the total cost of the services de
 Acceptance Criteria:
 
 Response returns a valid successful code
-Response returns a list of devices with a break down of costs per device and service
-Response returns the toal cost 
+Response returns a list of devices with a breakdown of costs per device and service
+Response returns the total cost
